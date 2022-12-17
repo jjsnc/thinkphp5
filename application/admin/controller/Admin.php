@@ -16,7 +16,6 @@ class Admin extends Controller
       $data = input('post.');
       // validate
       $validate = validate('AdminUser');
-
       if (!$validate->check($data)) {
         $this->error($validate->getError());
       }
@@ -26,9 +25,7 @@ class Admin extends Controller
 
       // 1 exception
       // 2 add id
-
       try {
-
         $id = model('AdminUser')->add($data);
       } catch (\Exception $e) {
         $this->error($e->getMessage());
