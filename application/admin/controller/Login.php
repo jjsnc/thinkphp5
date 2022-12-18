@@ -2,14 +2,24 @@
 
 namespace app\admin\controller;
 
+use app\common\validate\AdminUser;
 use think\Controller;
 use app\common\lib\IAuth;
 
-class Login extends Controller
+class Login extends Base
 {
+  public function _initialize()
+  {
+  }
   public function index()
   {
-    return $this->fetch();
+    $isLogin = $this->isLogin();
+    if ($isLogin) {
+      return $this->redirect('index/index');
+    } else {
+      // 如果后台用户已经登录了， 那么我们需要跳到后台页面
+      return $this->fetch();
+    }
   }
   /**
    * 登录相关业务
@@ -30,6 +40,7 @@ class Login extends Controller
       } catch (\Exception $e) {
         $this->error($e->getMessage());
       }
+
 
 
       if (!$user || $user->status != config('code.status_normal')) {
