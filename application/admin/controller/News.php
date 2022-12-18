@@ -36,7 +36,7 @@ class News extends Base
 
     // 模式二
     // page  size  from   limit from  size
-    // $this->getPageAndSize($data);
+    $this->getPageAndSize($data);
 
     // 获取表里面的数据
     $news = model('News')->getNewsByCondition($whereData, $this->from, $this->size);
