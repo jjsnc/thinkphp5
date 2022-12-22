@@ -25,7 +25,7 @@ class Test extends Controller {
     }
 
     public function update($id = 0) {
-        //echo $id;exit;
+        // echo $id;exit;
         halt(input('put.'));
         //return $id;
         //id   data
@@ -36,7 +36,7 @@ class Test extends Controller {
      * @return mixed
      */
     public function save() {
-        $data = input('post.');
+        // $data = input('post.');
 
         // 获取到提交数据 插入库，
         // 给客户端APP  =》 接口数据
