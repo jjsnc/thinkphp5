@@ -38,8 +38,6 @@ class Aes
     public function encrypt($input = '')
     {
         $data = openssl_encrypt($input, $this->method, $this->key, $this->options,$this->iv);
-        // $data  = openssl_encrypt($input, 'DES-ECB', $this->key, 0);
-        // $data = base64_encode($data);
 
         return $data;
     }

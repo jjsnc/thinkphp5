@@ -63,7 +63,7 @@ class Common extends Controller {
         // 需要sign
         if(!IAuth::checkSignPass($headers)) {
             throw new ApiException('授权码sign失败', 401);
-        }
+        }   
         Cache::set($headers['sign'], 1, config('app.app_sign_cache_time'));
 
         // 1、文件  2、mysql 3、redis

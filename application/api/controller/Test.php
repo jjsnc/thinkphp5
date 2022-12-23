@@ -40,7 +40,7 @@ class Test extends Common {
 
         // 获取到提交数据 插入库，
         // 给客户端APP  =》 接口数据
-        return show(1, 'OK', (new Aes())->encrypt(json_encode(input('post.'))), 201);
+        return show(1, 'OK', input('post.'), 201);
     }
 
     /**

@@ -47,19 +47,20 @@ class IAuth {
      */
     public static function checkSignPass($data) {
         $str = (new Aes())->decrypt($data['sign']);
-
         if(empty($str)) {
             return false;
         }
-
+     
         // diid=xx&app_type=3
         parse_str($str, $arr);
+
         if(!is_array($arr) || empty($arr['did'])
             || $arr['did'] != $data['did']
         ) {
+ 
             return false;
         }
-        if(!config('app_debug')) {
+        if(!config('app_debug') && false) {
             if ((time() - ceil($arr['time'] / 1000)) > config('app.app_sign_time')) {
                 return false;
             }
