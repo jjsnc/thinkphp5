@@ -15,7 +15,7 @@ use ali\top\TopClient;
 use ali\top\request\AlibabaAliqinFcSmsNumSendRequest;
 use app\common\lib\Alidayu;
 
-class Test extends Controller {
+class Test extends Common {
 
     public function index() {
         return [

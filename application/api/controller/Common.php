@@ -35,8 +35,8 @@ class Common extends Controller {
      * 初始化的方法
      */
     public function _initialize() {
-        $this->checkRequestAuth();
-        //$this->testAes();
+        // $this->checkRequestAuth();
+        $this->testAes();
     }
 
     /**
@@ -77,10 +77,13 @@ class Common extends Controller {
             'time' => Time::get13TimeStamp(),
         ];
 
-        //$str = 'sRCvj52mZ8G+u2OdHYwmysvczmCw+RrAYWiEaXFI/5A=';
-        // col9j6cqegAKiiey3IrXWo2zCRGHw8vogniwQZab0fgIVnKDb7Rin03dOqY2qLWP
+        // $str = "Ub1Y2U9Eg8UaZt3w/3zjEPs/v/2obacIxOG1vchrNBqKfzYaezfDAg==";
+
+       
         echo IAuth::setSign($data);exit;
-        echo (new Aes())->decrypt($str);exit;
+    //   echo (new Aes())->encrypt('1234567887654321');
+   
+        // echo (new Aes())->decrypt('Ub1Y2U9Eg8UaZt3w/3zjEBQsa+KMPkq0BhnpWukyUWKKfzYaezfDAoNx0PrBCKuw');exit;
     }
 
     /**
