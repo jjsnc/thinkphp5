@@ -76,6 +76,7 @@ class Common extends Controller {
             'version' => 1,
             'time' => Time::get13TimeStamp(),
         ];
+        // halt($data );
 
         // $str = "Ub1Y2U9Eg8UaZt3w/3zjEPs/v/2obacIxOG1vchrNBqKfzYaezfDAg==";
 
@@ -83,7 +84,7 @@ class Common extends Controller {
         echo IAuth::setSign($data);exit;
     //   echo (new Aes())->encrypt('1234567887654321');
    
-        // echo (new Aes())->decrypt('Ub1Y2U9Eg8UaZt3w/3zjEBQsa+KMPkq0BhnpWukyUWKKfzYaezfDAoNx0PrBCKuw');exit;
+        // echo (new Aes())->decrypt('Ub1Y2U9Eg8UaZt3w/3zjEDBAbY2Q9hRaI1zPWY36vf2KfzYaezfDAoNx0PrBCKuw');exit;
     }
 
     /**

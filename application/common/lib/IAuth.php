@@ -60,11 +60,11 @@ class IAuth {
  
             return false;
         }
-        if(!config('app_debug') && false) {
+        if(!config('app_debug')) {
             if ((time() - ceil($arr['time'] / 1000)) > config('app.app_sign_time')) {
                 return false;
             }
-            //echo Cache::get($data['sign']);exit;
+            // echo Cache::get($data['sign']);exit;
             // 唯一性判定
             if (Cache::get($data['sign'])) {
                 return false;

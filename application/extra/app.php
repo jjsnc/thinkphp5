@@ -13,7 +13,7 @@ return [
         'ios',
         'android',
     ],
-    'app_sign_time' => 10,// sign失效时间
+    'app_sign_time' => 100,// sign失效时间
     'app_sign_cache_time' => 20,// sign 缓存失效时间
     'login_time_out_day' => 7,// 登录token的失效时间
 ];
